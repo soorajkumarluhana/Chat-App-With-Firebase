@@ -21,7 +21,7 @@ class _SigninState extends State<Signin> {
           children: [
           SizedBox(height: 5,),
          Padding(
-           padding: const EdgeInsets.only(right: 700),
+           padding: const EdgeInsets.only(right: 350),
            child: Icon(Icons.arrow_back),
          ),
           SizedBox(height: 80,),  
@@ -34,12 +34,16 @@ class _SigninState extends State<Signin> {
         SizedBox(height: 20,),   
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: TextFormField(
-          decoration: InputDecoration(
-            
-          prefixIcon: Icon(Icons.email), 
-           hintText: "Email",
-               
+          child: TextField(  
+          style: TextStyle(
+            color: Colors.white
+          ),
+          decoration: InputDecoration(  
+          prefixIcon: Icon(Icons.email, color: Colors.white,), 
+           hintText: "Email", 
+           hintStyle: TextStyle(
+             color: Colors.white
+           )
           ),  
           ),
         ),
@@ -47,14 +51,28 @@ class _SigninState extends State<Signin> {
          Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(  
+          style: TextStyle(  
+            color: Colors.white
+          ),      
           obscureText: true,    
           decoration: InputDecoration(    
-          prefixIcon: Icon(Icons.lock),  
-           hintText: "Password",  
+          prefixIcon: Icon(Icons.lock, color: Colors.white,),  
+           hintText: "Password",
+           hintStyle: TextStyle(
+            color: Colors.white 
+           )  
           ),  
           ),
         ),
-       SizedBox(height: 10,), 
+       SizedBox(height: 18,), 
+       Padding(
+         padding: const EdgeInsets.only(left: 230),
+         child: Text("Forget Password?", style: TextStyle(
+           color: Colors.white, fontWeight: FontWeight.bold,
+           fontSize: 16
+         ),), 
+       ), 
+       SizedBox(height: 20,), 
         Container( 
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 140, vertical: 15),
