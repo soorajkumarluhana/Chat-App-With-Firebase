@@ -1,3 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatefulWidget {
@@ -8,6 +11,12 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
+
+
+TextEditingController userNameTextEditingController = new TextEditingController();
+TextEditingController emailTextEditingController = new TextEditingController();
+TextEditingController passwordTextEditingController = new TextEditingController();
+ 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,6 +44,7 @@ class _SignupState extends State<Signup> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: TextField(  
+         controller: userNameTextEditingController,  
           style: TextStyle(
             color: Colors.white
           ),
@@ -50,7 +60,8 @@ class _SignupState extends State<Signup> {
        SizedBox(height: 20,), 
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: TextField(  
+          child: TextField(
+         controller: emailTextEditingController,     
           style: TextStyle(
             color: Colors.white
           ),
@@ -66,7 +77,8 @@ class _SignupState extends State<Signup> {
        SizedBox(height: 20,), 
          Padding(
           padding: const EdgeInsets.all(8.0),
-          child: TextField(  
+          child: TextField(
+          controller: passwordTextEditingController,    
           style: TextStyle(  
             color: Colors.white
           ),      
@@ -99,8 +111,8 @@ class _SignupState extends State<Signup> {
         SizedBox(height: 20,),
         Container( 
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 140, vertical: 15),
-          child: Text("Sign in", style: TextStyle(
+          padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+          child: Text("Sign Up with Google", style: TextStyle(
           fontSize: 15,  
           color: Colors.black, fontWeight: FontWeight.bold,),),
         ),    
