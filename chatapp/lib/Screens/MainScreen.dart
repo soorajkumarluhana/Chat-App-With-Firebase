@@ -1,3 +1,5 @@
+import 'package:chatapp/Screens/signin.dart';
+import 'package:chatapp/Screens/signup.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -43,7 +45,11 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).pushNamed("/SignIn");
+                     Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+              builder: (BuildContext context) => const Signin(),
+             ),);
                   },
                   child: Container(
                     child: Padding(
@@ -70,7 +76,11 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).pushNamed("/SignUp");
+                     Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+              builder: (BuildContext context) => const Signup(),
+             ),);
                   },
                   child: Container(
                     child: Padding(

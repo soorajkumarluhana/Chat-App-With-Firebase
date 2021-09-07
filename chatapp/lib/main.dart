@@ -1,4 +1,5 @@
 import 'package:chatapp/Screens/MainScreen.dart';
+import 'package:chatapp/Screens/chattingscreen.dart';
 import 'package:chatapp/Screens/signin.dart';
 import 'package:chatapp/Screens/signup.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class _MyAppState extends State<MyApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
           debugShowCheckedModeBanner: false,  
-            home: MainScreen(),
+            home: Signin(),
           routes: {
             "/SignIn" : (context) => Signin(),
             "/SignUp" : (context) => Signup(),
