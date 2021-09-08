@@ -33,8 +33,27 @@ class _SignupState extends State<Signup> {
       firestore.collection("users").doc(user.user!.uid).set({
         "email": email,
         "username": username,
+        "id": user.user!.uid,
       });
-      Text('user is Registered');
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: AlertDialog(
+                title: Text("Registered"),
+                actions: [
+                  FloatingActionButton(
+                      child: Text("OK"),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      })
+                ],
+              ),
+            );
+          });
       userNameTextEditingController.text = "";
       emailTextEditingController.text = "";
       passwordTextEditingController.text = "";
@@ -180,11 +199,12 @@ class _SignupState extends State<Signup> {
                 ),
                 InkWell(
                   onTap: () {
-                     Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-              builder: (BuildContext context) => const Signin(),
-             ),);
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const Signin(),
+                      ),
+                    );
                   },
                   child: Container(
                     child: Padding(

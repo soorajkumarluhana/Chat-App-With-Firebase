@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 List<Profiles> ProfilesList = [    
-Profiles(name: "Sooraj", image: "images/bgimage.jpg"), 
+Profiles(name: "Sooraj",  image: "images/bgimage.jpg"), 
 Profiles(name: "Manisha", image: "images/imagebg.jpg"),
-Profiles(name: "Sooraj", image: "images/bgimages.jpg"),
+Profiles(name: "Sooraj",  image: "images/bgimages.jpg"),
 ];
 
 Widget profiles() {
@@ -19,7 +19,7 @@ Widget profiles() {
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              children: [
+              children: [ 
                 CircleAvatar(
                   maxRadius: 28,
                   backgroundImage: AssetImage(ProfilesList[index].image),

@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
           debugShowCheckedModeBanner: false,  
-            home: Signin(),
+            home: MainScreen(),
           routes: {
             "/SignIn" : (context) => Signin(),
             "/SignUp" : (context) => Signup(),
