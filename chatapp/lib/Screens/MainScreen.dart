@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: Container(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 140, vertical: 15),
+                          horizontal: 130, vertical: 15),
                       child: Text(
                         "Sign in",
                         style: TextStyle(
@@ -85,7 +85,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: Container(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 140, vertical: 15),
+                          horizontal: 130, vertical: 15),
                       child: Text(
                         "Sign up",
                         style: TextStyle(
