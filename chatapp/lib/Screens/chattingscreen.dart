@@ -1,3 +1,4 @@
+import 'package:chatapp/Models/Model.dart';
 import 'package:chatapp/Screens/signin.dart';
 import 'package:chatapp/Widgets/Widgets.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,8 @@ class ChatingScreen extends StatefulWidget {
 }
 
 class _ChatingScreenState extends State<ChatingScreen> {
+  
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

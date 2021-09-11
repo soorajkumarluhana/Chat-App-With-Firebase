@@ -52,9 +52,7 @@ class _MainScreenState extends State<MainScreen> {
              ),);
                   },
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 130, vertical: 15),
+                    child: Center(
                       child: Text(
                         "Sign in",
                         style: TextStyle(
@@ -83,9 +81,7 @@ class _MainScreenState extends State<MainScreen> {
              ),);
                   },
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 130, vertical: 15),
+                    child: Center(
                       child: Text(
                         "Sign up",
                         style: TextStyle(

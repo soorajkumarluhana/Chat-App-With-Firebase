@@ -86,10 +86,9 @@ class _SignupState extends State<Signup> {
                 SizedBox(
                   height: 80,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 230),
+                Center(
                   child: Text(
-                    "Create \n Account",
+                    "Create Account",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -175,9 +174,7 @@ class _SignupState extends State<Signup> {
                     _formKey.currentState!.validate();
                   },
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 150, vertical: 15),
+                    child: Center(
                       child: Text(
                         "Sign up",
                         style: TextStyle(
@@ -207,9 +204,7 @@ class _SignupState extends State<Signup> {
                     );
                   },
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 150, vertical: 15),
+                    child: Center(
                       child: Text(
                         "Sign In",
                         style: TextStyle(

@@ -52,10 +52,9 @@ class _SigninState extends State<Signin> {
                 SizedBox(
                   height: 80,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 230),
+                Center(
                   child: Text(
-                    "Welcome \n Back",
+                    "Welcome Back",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -63,7 +62,7 @@ class _SigninState extends State<Signin> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 50,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -112,8 +111,7 @@ class _SigninState extends State<Signin> {
                 SizedBox(
                   height: 18,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 230),
+                Center(
                   child: Text(
                     "Forget Password?",
                     style: TextStyle(
@@ -131,9 +129,7 @@ class _SigninState extends State<Signin> {
                     _formKey.currentState!.validate();
                   },
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 150, vertical: 15),
+                    child: Center(
                       child: Text(
                         "Sign In",
                         style: TextStyle(
@@ -162,9 +158,7 @@ class _SigninState extends State<Signin> {
              ),);
                   },
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 150, vertical: 15),
+                    child: Center(
                       child: Text(
                         "Sign Up",
                         style: TextStyle(
