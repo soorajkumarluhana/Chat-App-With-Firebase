@@ -6,6 +6,10 @@ List<Profiles> profilesList = [
 Profiles(name: "Sooraj",  image: "images/bgimage.jpg"), 
 Profiles(name: "Manisha", image: "images/imagebg.jpg"),
 Profiles(name: "Sooraj",  image: "images/bgimages.jpg"),
+Profiles(name: "Manisha", image: "images.imagebg.jpg"),
+Profiles(name: "Sooraj",  image: "images/bgimage.jpg"),
+Profiles(name: "Manisha", image: "images/imagebg.jpg"),
+Profiles(name: "Sooraj",  image: "images/bgimage.jpg"), 
 ];
 
 Widget profiles() {

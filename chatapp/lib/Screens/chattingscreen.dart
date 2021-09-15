@@ -1,7 +1,9 @@
 import 'package:chatapp/Models/Model.dart';
+import 'package:chatapp/Screens/UserProfile.dart';
 import 'package:chatapp/Screens/signin.dart';
 import 'package:chatapp/Widgets/Widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ChatingScreen extends StatefulWidget {
   const ChatingScreen({Key? key}) : super(key: key);
@@ -11,7 +13,9 @@ class ChatingScreen extends StatefulWidget {
 }
 
 class _ChatingScreenState extends State<ChatingScreen> {
-  
+  void data() async {
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,31 +28,53 @@ class _ChatingScreenState extends State<ChatingScreen> {
           ),
           backgroundColor: Colors.black87,
           actions: [
-            Icon(
-              Icons.search,
-              size: 30,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
+                  },
+                  child: Icon(Icons.person)),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
                   onTap: () {
-                   Navigator.pushReplacement( context, MaterialPageRoute(
-                   builder: (BuildContext context) => const Signin(),),);
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const Signin(),
+                      ),
+                    );
                   },
                   child: Icon(Icons.logout)),
             )
           ],
         ),
         body: Container(
-          decoration: BoxDecoration(
-           color: Colors.grey
+          decoration: BoxDecoration(color: Colors.grey),
+          child: ListView(
+            children: [
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                width: 100,
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      suffixIcon: Icon(Icons.search),
+                      hintText: "Search"),
+                ),
+                decoration: BoxDecoration(color: Colors.grey),
+              ),
+              SizedBox(
+                height: 6,
+              ),
+              profiles()
+            ],
           ),
-        child: ListView(
-          children: [
-           SizedBox(height: 6,), 
-           profiles()
-          ],
-        ),  
         ),
       ),
     );
