@@ -39,7 +39,7 @@ class _ProfileState extends State<Profile> {
                     onPressed: () {
                       imagePicker();
                     },
-                    child: Text("Upload"))
+                    child: Text("Up image"))
               ],
             )),
       ),
